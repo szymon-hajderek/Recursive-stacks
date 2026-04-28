@@ -1,0 +1,13 @@
+CompileFlags:
+  # Matches the C23 standard mentioned in the example code comments
+  Add: [-std=gnu23, -Wall, -Wextra, -pedantic]
+
+Diagnostics:
+  ClangTidy:
+    Add:
+      # Strictly enforces braces around all statements (if, for, while)
+      - readability-braces-around-statements
+      # Enforces one variable declaration per line to avoid pointer confusion
+      - readability-isolate-declaration
+      # Prevents implicit boolean conversions if needed
+      - readability-implicit-bool-conversion

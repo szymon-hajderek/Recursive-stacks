@@ -1,0 +1,8 @@
+*.o
+*.out
+*.so
+rstack
+rstack_example
+sh479226.tgz
+rstack_example_rel
+notes.txt

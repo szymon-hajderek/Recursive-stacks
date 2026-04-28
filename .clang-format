@@ -1,0 +1,45 @@
+Language: C
+BasedOnStyle: LLVM
+
+# 1. Line Width (3.1)
+ColumnLimit: 80
+
+# 2. Indentation (User requested: 2 spaces, Text 3.2.1)
+IndentWidth: 2
+UseTab: false
+
+# 3. Vertical Spacing (3.2.2)
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# 4. Horizontal Spacing (3.2.3)
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# 5. Pointers (User requested: consistency with ptr* types, Text 3.5.1)
+PointerAlignment: Right
+DerivePointerAlignment: false
+
+# 6. Inline restrictions (User requested: no inline ifs, no inline functions)
+AllowShortIfStatementsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortBlocksOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+# 7. Braces Insertion (User requested: no ifs without braces)
+# Note: Works in clang-format version 15+ to auto-insert missing braces
+InsertBraces: true
+
+# 8. Brackets on the last line (User requested + Text 3.5.2 examples)
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterControlStatement: false
+  AfterFunction: false
+  AfterStruct: false
+  AfterEnum: false
+  BeforeElse: true    # Matches text example: }\nelse {
+  BeforeWhile: false  # Matches text example: } while (...);
+  IndentBraces: false
